@@ -1,0 +1,931 @@
+/* --- 1. CONFIGURAÇÕES GLOBAIS E FONTES --- */
+
+/* Importa as fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Russo+One&display=swap');
+
+/* Define variáveis de fontes e cores para fácil manutenção */
+:root {
+    --font-heading: 'Russo One', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+    --primary-yellow: #FFD700;
+    --primary-white: #FFFFFF;
+    --primary-black: #000000;
+}
+
+/* Reset básico e configurações do corpo da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Correção de navegação e rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 80px; /* Garante que o header fixo não cubra o título da seção */
+}
+
+body {
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+    font-family: var(--font-body);
+}
+
+/* Classe específica para textos que devem ficar em caixa alta */
+.uppercase-text {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* --- 2. HEADER E NAVEGAÇÃO --- */
+
+.site-header {
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-nome {
+    font-family: var(--font-heading);
+    color: var(--primary-white);
+    font-size: 36px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.logo-slogan {
+    font-family: var(--font-body);
+    color: var(--primary-yellow);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 35px;
+}
+
+.nav-links a {
+    font-family: var(--font-body);
+    color: var(--primary-white);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: var(--primary-yellow);
+}
+
+.nav-links a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-yellow);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.mobile-menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu-icon div {
+    width: 32px;
+    height: 3px;
+    background-color: var(--primary-white);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+/* --- 3. SEÇÃO HERÓI (INÍCIO) --- */
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    padding: 140px 5% 60px 5%;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-title .highlight {
+    color: var(--primary-yellow);
+}
+
+.hero-text {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-yellow);
+    color: var(--primary-black);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 35px;
+    border: 2px solid var(--primary-yellow);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: var(--primary-yellow);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+
+/* --- 4. SEÇÃO SOBRE MIM --- */
+
+.about-section {
+    background-color: #080808;
+    padding: 100px 5%;
+    border-top: 1px solid #333;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-photo {
+    flex: 1;
+    max-width: 480px;
+}
+
+.about-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid var(--primary-yellow);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-yellow);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.about-text strong {
+    color: var(--primary-yellow);
+    font-weight: 700;
+}
+
+
+/* --- 5. SEÇÃO CONSULTORIA --- */
+
+.consultoria-section {
+    padding: 100px 5%;
+    background-color: var(--primary-black);
+    border-top: 1px solid #333;
+}
+
+.process-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+.process-card {
+    background-color: #080808;
+    border: 2px solid #222;
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+    flex: 1;
+    min-width: 320px;
+    max-width: 380px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-yellow);
+}
+
+.process-card .process-number {
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    font-family: var(--font-heading);
+    font-size: 90px;
+    color: rgba(255, 255, 255, 0.08);
+    z-index: 1;
+    text-align: right;
+}
+
+.process-card h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-yellow);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.process-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+.section-divider {
+    height: 2px;
+    width: 100px;
+    background-color: var(--primary-yellow);
+    margin: 0 auto 80px auto;
+}
+
+.consultoria-section .section-title h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background-color: #080808;
+    border-left: 4px solid var(--primary-yellow);
+    padding: 30px;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+.benefit-card:hover {
+    background-color: #111;
+}
+
+.benefit-card h5 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: var(--primary-white);
+}
+
+.benefit-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+
+/* --- 6. SEÇÃO RESULTADOS (SCROLLER) --- */
+
+.results-section {
+    padding: 100px 0;
+    background-color: #080808;
+    border-top: 1px solid #333;
+}
+
+.scroller-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+.scroller-inner {
+    display: flex;
+    gap: 0;
+    width: fit-content;
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-50%));
+    }
+}
+
+.scroller-wrapper:hover .scroller-inner {
+    animation-play-state: paused;
+}
+
+.scroller-inner img {
+    height: 400px;
+    width: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(80%);
+}
+
+.scroller-inner img:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+
+/* --- 7. SEÇÃO DEPOIMENTOS --- */
+
+.testimonials-section {
+    padding: 100px 5%;
+    background-color: var(--primary-black);
+    border-top: 1px solid #333;
+}
+
+.swipe-indicator {
+    display: none;
+}
+
+.testimonial-carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial-slide img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-yellow);
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #ddd;
+    margin-bottom: 25px;
+    font-style: italic;
+    max-width: 650px;
+    text-transform: none !important;
+}
+
+.testimonial-author {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--primary-yellow);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #444;
+    color: var(--primary-white);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.slider-nav:hover {
+    background-color: var(--primary-yellow);
+    color: var(--primary-black);
+    border-color: var(--primary-yellow);
+}
+
+.slider-nav.prev { left: 10px; }
+.slider-nav.next { right: 10px; }
+
+
+/* --- 8. SEÇÃO PLANOS --- */
+
+.plans-section {
+    padding: 100px 5%;
+    background-color: #080808;
+    border-top: 1px solid #333;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background-color: var(--primary-black);
+    border: 2px solid #222;
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+    flex: 1;
+    min-width: 320px;
+    max-width: 380px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.plan-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--primary-white);
+}
+
+.plan-subtitle {
+    color: #888;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+.plan-price {
+    margin-bottom: 30px;
+}
+
+.old-price {
+    font-size: 1.1rem;
+    color: #666;
+    text-decoration: line-through;
+    display: block;
+}
+
+.new-price {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--primary-yellow);
+    line-height: 1;
+}
+
+.new-price small {
+    font-size: 1.8rem;
+}
+
+.plan-features {
+    list-style: none;
+    text-align: left;
+    margin: 0 auto 30px auto;
+    max-width: 250px;
+}
+
+.plan-features li {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.cta-button-plan {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border: 2px solid var(--primary-yellow);
+    color: var(--primary-yellow);
+}
+
+.cta-button-plan:hover {
+    background-color: var(--primary-yellow);
+    color: var(--primary-black);
+    transform: scale(1.02);
+}
+
+.plan-card.highlighted {
+    border-color: var(--primary-yellow);
+    transform: scale(1.05);
+}
+
+.plan-card.highlighted:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.plan-card.highlighted .cta-button-plan {
+    background-color: var(--primary-yellow);
+    color: var(--primary-black);
+}
+
+.plan-card.highlighted .cta-button-plan:hover {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-yellow);
+    color: var(--primary-black);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+
+/* --- 9. SEÇÃO CONTATO --- */
+
+.contact-section {
+    padding: 100px 5%;
+    background-color: var(--primary-black);
+    border-top: 1px solid #333;
+}
+
+.contact-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    border-color: var(--primary-yellow);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.15);
+}
+
+.social-link i {
+    font-size: 48px;
+    color: var(--primary-white);
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-link span {
+    font-family: var(--font-heading);
+    color: #888;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover i,
+.social-link:hover span {
+    color: var(--primary-yellow);
+}
+
+
+/* --- 10. FOOTER --- */
+
+.site-footer-final {
+    background-color: #080808;
+    border-top: 1px solid #333;
+    padding: 40px 5%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright-text,
+.developer-credit {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.developer-credit a {
+    color: var(--primary-yellow);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.developer-credit a:hover {
+    color: var(--primary-white);
+}
+
+
+/* --- 11. RESPONSIVIDADE (MOBILE) --- */
+
+@media (max-width: 768px) {
+    /* Logo */
+    .logo-nome {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+    .logo-slogan {
+        font-size: 13px;
+    }
+    
+    /* ** A CORREÇÃO ESTÁ AQUI ** */
+    /* Títulos de Seção */
+    .section-title h2 {
+        font-size: 1.5rem; /* Tamanho reduzido para caber em telas estreitas */
+        letter-spacing: 1px; /* Menos espaçamento */
+    }
+
+    /* Menu Mobile */
+    body.nav-open {
+        overflow: hidden;
+    }
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 70%;
+        height: calc(100vh - 80px);
+        background-color: rgba(10, 10, 10, 0.98);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        gap: 25px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-links li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .nav-active {
+        transform: translateX(0);
+    }
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-8px, 6px);
+    }
+    .toggle .line2 {
+        opacity: 0;
+    }
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-8px, -6px);
+    }
+
+    /* Seções Gerais */
+    .about-section, .consultoria-section, .results-section, .testimonials-section, .plans-section, .contact-section {
+        padding: 80px 15px;
+    }
+    
+    /* Sobre Mim */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .about-photo {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    /* Consultoria */
+    .process-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    .benefit-card p, .process-card p {
+        font-size: 1rem;
+    }
+    
+    /* Resultados */
+    .results-section {
+        padding: 80px 0;
+    }
+    .scroller-inner img {
+        height: 300px;
+    }
+    
+    /* Depoimentos (MODO SWIPE) */
+    .swipe-indicator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: #888;
+        margin-bottom: 20px;
+    }
+    .swipe-indicator i {
+        color: var(--primary-yellow);
+    }
+    .testimonial-carousel {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+    .testimonial-carousel::-webkit-scrollbar {
+        display: none;
+    }
+    .testimonials-slider {
+        transition: none;
+    }
+    .testimonial-slide {
+        scroll-snap-align: center;
+        padding: 10px;
+    }
+    .testimonial-slide img {
+        width: 110px;
+        height: 110px;
+    }
+    .testimonial-text {
+        font-size: 1rem;
+    }
+    .slider-nav {
+        display: none;
+    }
+
+    /* Planos */
+    .plan-card.highlighted {
+        transform: scale(1);
+    }
+    .new-price {
+        font-size: 3.2rem;
+    }
+    .new-price small {
+        font-size: 1.5rem;
+    }
+    
+    /* Contato */
+    .contact-intro {
+        font-size: 1rem;
+    }
+    .social-links-container {
+        gap: 25px;
+    }
+    .social-link {
+        width: 130px;
+        height: 130px;
+    }
+    .social-link i {
+        font-size: 40px;
+    }
+    .social-link span {
+        font-size: 0.8rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .copyright-text,
+    .developer-credit {
+        text-align: center;
+    }
+}
