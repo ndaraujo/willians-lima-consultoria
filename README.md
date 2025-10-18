@@ -10,9 +10,7 @@ Este é o repositório da landing page desenvolvida para o Personal Trainer **Wi
 
 ## 📸 Preview
 
-(Adicione um screenshot ou, de preferência, um GIF do site em ação aqui! Um GIF mostrando a versão desktop e mobile é excelente para portfólio.)
-
-![Preview do site Willians Lima](./preview.gif)
+![Preview do site Willians Lima](./screenshot.jpeg)
 
 ## 🎯 Sobre o Projeto
 
