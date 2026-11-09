@@ -5,61 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Willians Lima - Personal Trainer e Consultoria Online de Alta Performance</title>
     <meta name="description" content="Transforme seu corpo e sua mente com a consultoria online de Willians Lima. Treinos personalizados para hipertrofia, emagrecimento e alta performance.">
+    <!-- Ícones Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Efeito de iluminação de fundo global -->
+    <div class="ambient-glow"></div>
+
+    <!-- HEADER FLUTUANTE GLASSMORPHISM -->
     <header class="site-header">
-        <a href="index.html" class="logo-link">
-            <div class="logo">
-                <h1 class="logo-nome">Willians Lima</h1>
-                <span class="logo-slogan">Alta Performance</span>
+        <div class="header-container">
+            <a href="#inicio" class="logo-link">
+                <div class="logo">
+                    <h1 class="logo-nome">Willians Lima</h1>
+                    <span class="logo-slogan">Alta Performance</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#consultoria">Consultoria</a></li>
+                    <li><a href="#resultados">Resultados</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#planos">Planos</a></li> 
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu-icon">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
-        </a>
-
-        <nav class="nav-menu">
-            <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#consultoria">Consultoria</a></li>
-                <li><a href="#resultados">Resultados</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#planos">Planos</a></li> 
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-
-        <div class="mobile-menu-icon">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
         </div>
     </header>
 
     <main>
+        <!-- 1. SEÇÃO INÍCIO (HERO) -->
         <section id="inicio" class="hero-section">
-            <div class="hero-content">
+            <div class="hero-grid-bg"></div>
+            
+            <div class="hero-content reveal">
                 <h2 class="hero-title">
                     CHEGA DE TREINAR SEM RESULTADOS.<br>
-                    ALCANCE SUA <span class="highlight">ALTA PERFORMANCE</span>.
+                    ALCANCE SUA <span class="highlight-gradient">ALTA PERFORMANCE</span>.
                 </h2>
                 <p class="hero-text">
                     Você se dedica na academia, segue planos genéricos e, mesmo assim, o espelho não mente: você não está evoluindo. Chega de perder tempo. Com meu método de acompanhamento real e treinos 100% personalizados, seu esforço finalmente vai se transformar no físico que você deseja.
                 </p>
-                <a href="#consultoria" class="cta-button">INICIAR MINHA TRANSFORMAÇÃO</a>
+                <div class="hero-actions">
+                    <a href="#consultoria" class="button button--primary">
+                        <span>INICIAR MINHA TRANSFORMAÇÃO</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
+        <!-- 2. SEÇÃO SOBRE MIM -->
         <section id="sobre" class="about-section">
             <div class="section-title">
-                <h2>SOBRE <span class="highlight">MIM</span></h2>
+                <h2>SOBRE <span class="highlight-gradient">MIM</span></h2>
             </div>
+            
             <div class="about-container">
-                <div class="about-photo">
+                <div class="about-photo-wrapper">
+                    <div class="photo-glow"></div>
                     <img src="assets/willians.png" class="williansfoto" alt="Foto de Willians Lima, personal trainer e especialista em alta performance">
                 </div>
-                <div class="about-text">
+                
+                <div class="about-text-card">
                     <h3>A CIÊNCIA POR TRÁS DA SUA FORÇA</h3>
                     <p>
                         Meu nome é Jorge Willians e eu acredito em uma coisa: alta performance não nasce da sorte, nasce da ciência. Minha jornada começou com a base sólida da graduação em <strong>Educação Física</strong>, onde aprendi os pilares do movimento humano.
@@ -68,74 +87,106 @@
                         Mas para entregar resultados de elite, era preciso ir além. Minhas especializações em <strong>Fisiologia Humana e Biomecânica Aplicada</strong> me deram o conhecimento para entender seu corpo em nível celular, garantindo que cada repetição do seu treino seja segura, eficiente e cirurgicamente precisa para o seu objetivo.
                     </p>
                     <p>
-                        Hoje, cursando o 5º período de <strong>Nutrição</strong>, integro o que acontece no seu prato com o que acontece na academia, oferecendo uma abordagem 360° que acelera sua transformação. Além disso, com capacitação para atender <strong>grupos especiais e com doenças crônicas</strong>, tenho o compromisso de adaptar o mais alto nível de treinamento para qualquer pessoa disposta a evoluir.
+                        Hoje, graduando em <strong>Nutrição</strong>, integro o que acontece no seu prato com o que acontece na academia, oferecendo uma abordagem 360° que acelera sua transformação. Além disso, com capacitação para atender <strong>grupos especiais e com doenças crônicas</strong>, tenho o compromisso de adaptar o mais alto nível de treinamento para qualquer pessoa disposta a evoluir.
                     </p>
-                    <p>
+                    <p class="about-highlight-quote">
                         Meu trabalho não é só prescrever treinos. É te dar o poder de entender seu corpo e conquistar a melhor versão de si mesmo. <strong>Vamos construir esse resultado juntos?</strong>
                     </p>
                 </div>
             </div>
         </section>
 
+        <!-- 3. SEÇÃO CONSULTORIA -->
         <section id="consultoria" class="consultoria-section">
             <div class="section-title">
-                <h2>COMO FUNCIONA A <span class="highlight">CONSULTORIA</span></h2>
+                <h2>COMO FUNCIONA A <span class="highlight-gradient">CONSULTORIA</span></h2>
             </div>
 
-            <div class="process-container">
-                <div class="process-card">
+            <!-- Bento Grid de Processo (Passos) -->
+            <div class="process-bento-grid">
+                <div class="process-card spotlight-card">
+                    <div class="card-glow"></div>
                     <div class="process-number">01</div>
-                    <h4>Diagnóstico Completo</h4>
-                    <p>Primeiro, você preencherá uma anamnese detalhada. É o nosso ponto de partida para mapear seus objetivos, histórico e individualidade biológica.</p>
+                    <div class="process-card-content">
+                        <h4>Diagnóstico Completo</h4>
+                        <p>Primeiro, você preencherá uma anamnese detalhada. É o nosso ponto de partida para mapear seus objetivos, histórico e individualidade biológica.</p>
+                    </div>
                 </div>
-                <div class="process-card">
+
+                <div class="process-card spotlight-card">
+                    <div class="card-glow"></div>
                     <div class="process-number">02</div>
-                    <h4>Plano de Ação via App</h4>
-                    <p>Seus treinos são entregues em um aplicativo exclusivo, com vídeos didáticos para cada exercício, garantindo execução perfeita e segurança máxima.</p>
+                    <div class="process-card-content">
+                        <h4>Plano de Ação via App</h4>
+                        <p>Seus treinos são entregues em um aplicativo exclusivo, com vídeos didáticos para cada exercício, garantindo execução perfeita e segurança máxima.</p>
+                    </div>
                 </div>
-                <div class="process-card">
+
+                <div class="process-card spotlight-card">
+                    <div class="card-glow"></div>
                     <div class="process-number">03</div>
-                    <h4>Suporte<br> Contínuo</h4>
-                    <p>Estarei disponível 24h via WhatsApp para sanar qualquer dúvida. Seu resultado é meu compromisso, e a comunicação é a chave para isso.</p>
+                    <div class="process-card-content">
+                        <h4>Suporte Contínuo</h4>
+                        <p>Estarei disponível 24h via WhatsApp para sanar qualquer dúvida. Seu resultado é meu compromisso, e a comunicação é a chave para isso.</p>
+                    </div>
                 </div>
             </div>
 
             <div class="section-divider"></div>
 
             <div class="section-title">
-                <h3>BENEFÍCIOS DA <span class="highlight">ALTA PERFORMANCE</span></h3>
+                <h3>BENEFÍCIOS DA <span class="highlight-gradient">ALTA PERFORMANCE</span></h3>
             </div>
+
             <div class="benefits-grid">
-                <div class="benefit-card">
+                <div class="benefit-card spotlight-card">
+                    <div class="card-glow"></div>
+                    <div class="benefit-icon"><i class="fa-solid fa-dumbbell"></i></div>
                     <h5>Treino 100% Personalizado</h5>
                     <p>Seu plano é construído do zero, baseado nos seus objetivos, seja hipertrofia, emagrecimento ou performance.</p>
                 </div>
-                <div class="benefit-card">
+                
+                <div class="benefit-card spotlight-card">
+                    <div class="card-glow"></div>
+                    <div class="benefit-icon"><i class="fa-solid fa-bolt"></i></div>
                     <h5>Evolução Acelerada</h5>
                     <p>Com um método baseado em ciência, você sentirá a diferença no seu desempenho e no seu físico muito mais rápido.</p>
                 </div>
-                <div class="benefit-card">
+
+                <div class="benefit-card spotlight-card">
+                    <div class="card-glow"></div>
+                    <div class="benefit-icon"><i class="fa-solid fa-wallet"></i></div>
                     <h5>Economia Inteligente</h5>
                     <p>Invista em um plano que realmente funciona, economizando tempo e dinheiro com métodos que não te levam a lugar nenhum.</p>
                 </div>
-                <div class="benefit-card">
+
+                <div class="benefit-card spotlight-card">
+                    <div class="card-glow"></div>
+                    <div class="benefit-icon"><i class="fa-solid fa-child-reaching"></i></div>
                     <h5>Correção Postural</h5>
                     <p>Cada movimento é pensado para fortalecer seu corpo e corrigir desequilíbrios, prevenindo lesões e otimizando a forma.</p>
                 </div>
-                <div class="benefit-card">
+
+                <div class="benefit-card spotlight-card">
+                    <div class="card-glow"></div>
+                    <div class="benefit-icon"><i class="fa-solid fa-mobile-screen"></i></div>
                     <h5>Plataforma Exclusiva</h5>
                     <p>Acesso total ao aplicativo com sua planilha de treinos, vídeos explicativos e acompanhamento de progresso na sua mão.</p>
                 </div>
-                <div class="benefit-card">
+
+                <div class="benefit-card spotlight-card">
+                    <div class="card-glow"></div>
+                    <div class="benefit-icon"><i class="fa-solid fa-award"></i></div>
                     <h5>Confiança e Experiência</h5>
                     <p>São mais de 10 anos de experiência transformando vidas e construindo físicos de alta performance. Seu objetivo está em boas mãos.</p>
                 </div>
             </div>
         </section>
 
+        <!-- 4. SEÇÃO RESULTADOS (SCROLLER INFINITO) -->
         <section id="resultados" class="results-section">
-            <div class="section-title">
-                <h2>TRANSFORMAÇÕES <span class="highlight">REAIS</span></h2>
+            <div class="section-title results-title-container">
+                <h2>TRANSFORMAÇÕES <span class="highlight-gradient">REAIS</span></h2>
             </div>
             
             <div class="scroller-wrapper">
@@ -148,9 +199,19 @@
                     <img src="assets/6.jpeg" alt="Resultado de aluno 3 - Depois">
                     <img src="assets/7.jpeg" alt="Resultado de aluna 4 - Antes">
                     <img src="assets/8.jpeg" alt="Resultado de aluna 4 - Depois">
-                    <img src="assets/9.jpeg" alt="Resultado de aluno 5 - Antes">
-                    <img src="assets/10.jpeg" alt="Resultado de aluno 5 - Depois">
+                    <img src="assets/9.jpeg" alt="Resultado de aluna 4 - Antes">
+                    <img src="assets/10.jpeg" alt="Resultado de aluna 4 - Depois">
+                    <img src="assets/11.jpeg" alt="Resultado de aluna 4 - Antes">
+                    <img src="assets/12.jpeg" alt="Resultado de aluna 4 - Depois">
+                    <img src="assets/13.jpeg" alt="Resultado de aluna 4 - Antes">
+                    <img src="assets/14.jpeg" alt="Resultado de aluna 4 - Depois">
+                    <img src="assets/15.jpeg" alt="Resultado de aluna 4 - Antes">
+                    <img src="assets/16.jpeg" alt="Resultado de aluna 4 - Antes">
+                    <img src="assets/17.jpeg" alt="Resultado de aluna 4 - Depois">
+                    <img src="assets/18.jpeg" alt="Resultado de aluna 4 - Antes">
+                    
 
+                    <!-- Bloco duplicado para loop infinito -->
                     <img src="assets/1.jpeg" alt="Resultado de aluno 1 - Antes">
                     <img src="assets/2.jpeg" alt="Resultado de aluno 1 - Depois">
                     <img src="assets/3.jpeg" alt="Resultado de aluna 2 - Antes">
@@ -159,12 +220,21 @@
                     <img src="assets/6.jpeg" alt="Resultado de aluno 3 - Depois">
                     <img src="assets/7.jpeg" alt="Resultado de aluna 4 - Antes">
                     <img src="assets/8.jpeg" alt="Resultado de aluna 4 - Depois">
-                    <img src="assets/9.jpeg" alt="Resultado de aluno 5 - Antes">
-                    <img src="assets/10.jpeg" alt="Resultado de aluno 5 - Depois">
+                    <img src="assets/9.jpeg" alt="Resultado de aluna 4 - Antes">
+                    <img src="assets/10.jpeg" alt="Resultado de aluna 4 - Depois">
+                    <img src="assets/11.jpeg" alt="Resultado de aluna 4 - Antes">
+                    <img src="assets/12.jpeg" alt="Resultado de aluna 4 - Depois">
+                    <img src="assets/13.jpeg" alt="Resultado de aluna 4 - Antes">
+                    <img src="assets/14.jpeg" alt="Resultado de aluna 4 - Depois">
+                    <img src="assets/15.jpeg" alt="Resultado de aluna 4 - Antes">
+                    <img src="assets/16.jpeg" alt="Resultado de aluna 4 - Depois">
+                    <img src="assets/17.jpeg" alt="Resultado de aluna 4 - Antes">
+                    <img src="assets/18.jpeg" alt="Resultado de aluna 4 - Depois">
                 </div>
             </div>
         </section>
 
+        <!-- 5. SEÇÃO DEPOIMENTOS -->
         <section id="depoimentos" class="testimonials-section">
             <div class="section-title">
                 <h2>O QUE DIZEM OS <span class="highlight">ALUNOS</span></h2>
@@ -208,13 +278,15 @@
             </div>
         </section>
 
+        <!-- 6. SEÇÃO PLANOS -->
         <section id="planos" class="plans-section">
             <div class="section-title">
-                <h2>PLANOS FEITOS PARA SUA <span class="highlight">EVOLUÇÃO</span></h2>
+                <h2>PLANOS FEITOS PARA SUA <span class="highlight-gradient">EVOLUÇÃO</span></h2>
             </div>
+            
             <div class="plans-container">
-                
-                <div class="plan-card">
+                <div class="plan-card spotlight-card">
+                    <div class="card-glow"></div>
                     <h3 class="plan-title">MENSAL</h3>
                     <p class="plan-subtitle">Comece agora</p>
                     <div class="plan-price">
@@ -222,15 +294,16 @@
                         <span class="new-price">R$ 90<small>,00</small></span>
                     </div>
                     <ul class="plan-features">
-                        <li>✓ Acesso Total ao App</li>
-                        <li>✓ Treino 100% Personalizado</li>
-                        <li>✓ Suporte via WhatsApp</li>
+                        <li><i class="fa-solid fa-check"></i> Acesso Total ao App</li>
+                        <li><i class="fa-solid fa-check"></i> Treino 100% Personalizado</li>
+                        <li><i class="fa-solid fa-check"></i> Suporte via WhatsApp</li>
                     </ul>
-                    <a href="https://wa.me/5521997765995?text=Ol%C3%A1%2C%20Willians!%20Tenho%20interesse%20no%20Plano%20Mensal.%20Gostaria%20de%20come%C3%A7ar." target="_blank" rel="noopener noreferrer" class="cta-button-plan">QUERO ESTE PLANO</a>
+                    <a href="https://wa.me/5521997765995?text=Ol%C3%A1%2C%20Willians!%20Tenho%20interesse%20no%20Plano%20Mensal.%20Gostaria%20de%20come%C3%A7ar." target="_blank" class="button button--outline">QUERO ESTE PLANO</a>
                 </div>
 
-                <div class="plan-card highlighted">
+                <div class="plan-card spotlight-card highlighted-plan">
                     <div class="popular-badge">MAIS POPULAR</div>
+                    <div class="card-glow"></div>
                     <h3 class="plan-title">TRIMESTRAL</h3>
                     <p class="plan-subtitle">Melhor custo-benefício</p>
                     <div class="plan-price">
@@ -238,15 +311,16 @@
                         <span class="new-price">R$ 250<small>,00</small></span>
                     </div>
                     <ul class="plan-features">
-                        <li>✓ Acesso Total ao App</li>
-                        <li>✓ Treino 100% Personalizado</li>
-                        <li>✓ Suporte Prioritário</li>
-                        <li>✓ Ajustes Mensais no Treino</li>
+                        <li><i class="fa-solid fa-check"></i> Acesso Total ao App</li>
+                        <li><i class="fa-solid fa-check"></i> Treino 100% Personalizado</li>
+                        <li><i class="fa-solid fa-check"></i> Suporte Prioritário</li>
+                        <li><i class="fa-solid fa-check"></i> Ajustes Mensais no Treino</li>
                     </ul>
-                    <a href="https://wa.me/5521997765995?text=Ol%C3%A1%2C%20Willians!%20Tenho%20interesse%20no%20Plano%20Trimestral.%20Gostaria%20de%20come%C3%A7ar." target="_blank" rel="noopener noreferrer" class="cta-button-plan">QUERO ESTE PLANO</a>
+                    <a href="https://wa.me/5521997765995?text=Ol%C3%A1%2C%20Willians!%20Tenho%20interesse%20no%20Plano%20Trimestral.%20Gostaria%20de%20come%C3%A7ar." target="_blank" class="button button--primary" style="width: 100%;">QUERO ESTE PLANO</a>
                 </div>
 
-                <div class="plan-card">
+                <div class="plan-card spotlight-card">
+                    <div class="card-glow"></div>
                     <h3 class="plan-title">SEMESTRAL</h3>
                     <p class="plan-subtitle">Compromisso total</p>
                     <div class="plan-price">
@@ -254,37 +328,37 @@
                         <span class="new-price">R$ 480<small>,00</small></span>
                     </div>
                     <ul class="plan-features">
-                        <li>✓ Acesso Total ao App</li>
-                        <li>✓ Treino 100% Personalizado</li>
-                        <li>✓ Suporte Prioritário</li>
-                        <li>✓ Reavaliação Estratégica</li>
+                        <li><i class="fa-solid fa-check"></i> Acesso Total ao App</li>
+                        <li><i class="fa-solid fa-check"></i> Treino 100% Personalizado</li>
+                        <li><i class="fa-solid fa-check"></i> Suporte Prioritário</li>
+                        <li><i class="fa-solid fa-check"></i> Reavaliação Estratégica</li>
                     </ul>
-                    <a href="https://wa.me/5521997765995?text=Ol%C3%A1%2C%20Willians!%20Tenho%20interesse%20no%20Plano%20Semestral.%20Gostaria%20de%20come%C3%A7ar." target="_blank" rel="noopener noreferrer" class="cta-button-plan">QUERO ESTE PLANO</a>
+                    <a href="https://wa.me/5521997765995?text=Ol%C3%A1%2C%20Willians!%20Tenho%20interesse%20no%20Plano%20Semestral.%20Gostaria%20de%20come%C3%A7ar." target="_blank" class="button button--outline">QUERO ESTE PLANO</a>
                 </div>
-
             </div>
         </section>
 
+        <!-- 7. SEÇÃO CONTATO -->
         <section id="contato" class="contact-section">
             <div class="section-title">
-                <h2>CONECTE-SE E <span class="highlight">TRANSFORME</span></h2>
+                <h2>CONECTE-SE E <span class="highlight-gradient">TRANSFORME</span></h2>
             </div>
             <p class="contact-intro">PRONTO PARA DAR O PRIMEIRO PASSO? ESCOLHA SUA PLATAFORMA PREFERIDA E VAMOS COMEÇAR A CONSTRUIR SUA MELHOR VERSÃO.</p>
 
             <div class="social-links-container">
-                <a href="https://wa.me/5521997765995" target="_blank" rel="noopener noreferrer" class="social-link">
+                <a href="https://wa.me/5521997765995" target="_blank" class="social-link">
                     <i class="fa-brands fa-whatsapp"></i>
                     <span>WHATSAPP</span>
                 </a>
-                <a href="https://www.instagram.com/williians_lima/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <a href="https://www.instagram.com/williians_lima/" target="_blank" class="social-link">
                     <i class="fa-brands fa-instagram"></i>
                     <span>INSTAGRAM</span>
                 </a>
-                <a href="https://www.facebook.com/J.Willianss" target="_blank" rel="noopener noreferrer" class="social-link">
+                <a href="https://www.facebook.com/J.Willianss" target="_blank" class="social-link">
                     <i class="fa-brands fa-facebook-f"></i>
                     <span>FACEBOOK</span>
                 </a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <a href="https://www.linkedin.com/" target="_blank" class="social-link">
                     <i class="fa-brands fa-linkedin-in"></i>
                     <span>LINKEDIN</span>
                 </a>
@@ -293,17 +367,18 @@
 
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer-final">
         <div class="footer-content">
             <p class="copyright-text">
                 &copy; 2025 Willians Lima Alta Performance. Todos os direitos reservados.
             </p>
             <p class="developer-credit">
-                Desenvolvido por <a href="https://devlima.tec.br" target="_blank" rel="noopener noreferrer">Dev Lima</a>
+                Desenvolvido por <a href="https://devlima.tec.br" target="_blank">Dev Lima</a>
             </p>
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
