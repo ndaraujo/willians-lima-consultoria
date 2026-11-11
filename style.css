@@ -137,18 +137,165 @@ body {
 .hero-text { font-family: var(--font-body); color: var(--text-secondary); font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.75; max-width: 680px; margin: 0 auto 44px auto; }
 
 
-/* --- 4. SEÇÃO SOBRE MIM --- */
-.about-section { position: relative; background-color: var(--bg-surface); padding: 120px 5%; border-top: 1px solid var(--border-subtle); }
-.section-title h2 { font-family: var(--font-heading); font-size: clamp(2.2rem, 4.5vw, 3.2rem); text-transform: uppercase; letter-spacing: 1px; text-align: center; margin-bottom: 60px; }
-.about-container { display: flex; align-items: center; gap: 64px; max-width: 1200px; margin: 0 auto; }
-.about-photo-wrapper { flex: 1; max-width: 480px; position: relative; }
-.photo-glow { position: absolute; inset: -10px; background: var(--gold-gradient); border-radius: 20px; filter: blur(25px); opacity: 0.2; z-index: 0; }
-.about-photo-wrapper img { position: relative; z-index: 1; width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border-highlight); object-fit: cover; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); }
-.about-text-card { flex: 1; background: var(--bg-glass); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 40px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); }
-.about-text-card h3 { font-family: var(--font-heading); color: var(--primary-yellow); font-size: 1.6rem; text-transform: uppercase; margin-bottom: 24px; letter-spacing: 0.5px; }
-.about-text-card p { font-size: 1.05rem; line-height: 1.75; color: var(--text-secondary); margin-bottom: 20px; }
-.about-text-card strong { color: var(--primary-white); font-weight: 600; }
-.about-highlight-quote { color: var(--text-primary) !important; border-left: 3px solid var(--primary-yellow); padding-left: 16px; margin-top: 24px; margin-bottom: 0 !important; font-style: italic; }
+/* --- 4. SEÇÃO SOBRE MIM (MOLDURA DUPLA EVOLUÇÃO) --- */
+.about-section {
+    position: relative;
+    background-color: var(--bg-surface);
+    padding: 120px 5%;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.section-title h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.about-photo-wrapper {
+    flex: 1.15;
+    max-width: 560px;
+    position: relative;
+}
+
+.photo-glow {
+    position: absolute;
+    inset: -10px;
+    background: var(--gold-gradient);
+    border-radius: 20px;
+    filter: blur(28px);
+    opacity: 0.18;
+    z-index: 0;
+}
+
+/* Grid Lado a Lado */
+.evolution-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: stretch;
+}
+
+.evolution-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    height: 480px;
+    background-color: var(--bg-main);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.evolution-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s ease;
+}
+
+/* Estilo da Foto "O Início" (Antes) */
+.evolution-before {
+    border: 1px solid var(--border-subtle);
+}
+
+.evolution-before img {
+    filter: grayscale(65%) contrast(1.05) brightness(0.88);
+}
+
+.evolution-before:hover img {
+    filter: grayscale(15%) brightness(1);
+    transform: scale(1.04);
+}
+
+/* Estilo da Foto "Alta Performance" (Depois) */
+.evolution-after {
+    border: 2px solid var(--primary-yellow);
+    box-shadow: var(--glow-gold);
+}
+
+.evolution-after:hover img {
+    transform: scale(1.04);
+}
+
+/* Etiquetas Flutuantes (Badges) */
+.evolution-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(14, 14, 18, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-subtle);
+}
+
+.evolution-badge.badge-gold {
+    background: var(--gold-gradient);
+    color: #050507;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.35);
+}
+
+/* Card de Texto */
+.about-text-card {
+    flex: 1;
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.about-text-card h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-yellow);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+}
+
+.about-text-card p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.about-text-card strong {
+    color: var(--primary-white);
+    font-weight: 600;
+}
+
+.about-highlight-quote {
+    color: var(--text-primary) !important;
+    border-left: 3px solid var(--primary-yellow);
+    padding-left: 16px;
+    margin-top: 24px;
+    margin-bottom: 0 !important;
+    font-style: italic;
+}
 
 
 /* --- 5. SEÇÃO CONSULTORIA (BENTO GRID & SPOTLIGHT) --- */
@@ -182,7 +329,7 @@ body {
 .scroller-inner img:hover { filter: grayscale(0%) contrast(1); transform: scale(1.02); }
 
 
-/* --- 7. SEÇÃO DEPOIMENTOS (CORRIGIDO: 1 POR VEZ) --- */
+/* --- 7. SEÇÃO DEPOIMENTOS (1 POR VEZ) --- */
 .testimonials-section {
     position: relative;
     padding: 120px 5%;
@@ -201,9 +348,9 @@ body {
     background: var(--bg-surface);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
-    padding: 50px 0; /* Sem padding horizontal no container para não vazar o próximo slide */
+    padding: 50px 0;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    overflow: hidden; /* Esconde totalmente os outros depoimentos */
+    overflow: hidden;
 }
 
 .testimonials-slider {
@@ -214,9 +361,9 @@ body {
 
 .testimonial-slide {
     min-width: 100%;
-    flex: 0 0 100%; /* Garante que cada depoimento ocupe 100% do espaço */
+    flex: 0 0 100%;
     box-sizing: border-box;
-    padding: 0 85px; /* Espaço interno para o texto não encostar nas setas */
+    padding: 0 85px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -281,7 +428,7 @@ body {
 .slider-nav.next { right: 18px; }
 
 
-/* --- 8. SEÇÃO PLANOS (CORRIGIDO: SELO MAIS POPULAR VISÍVEL) --- */
+/* --- 8. SEÇÃO PLANOS (SELO MAIS POPULAR VISÍVEL) --- */
 .plans-section {
     position: relative;
     padding: 120px 5%;
@@ -297,7 +444,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
-    padding-top: 15px; /* Espaço extra no topo para o selo respirar */
+    padding-top: 15px;
 }
 
 .plan-card {
@@ -309,7 +456,7 @@ body {
     max-width: 380px;
     padding: 48px 35px 40px 35px;
     text-align: center;
-    overflow: visible; /* Permite que o selo 'MAIS POPULAR' apareça inteiro na borda */
+    overflow: visible;
 }
 
 .highlighted-plan {
@@ -346,7 +493,7 @@ body {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    white-space: nowrap; /* Impede que o texto quebre ou corte */
+    white-space: nowrap;
     box-shadow: 0 6px 20px rgba(255, 215, 0, 0.35);
     z-index: 10;
 }
@@ -388,8 +535,12 @@ body {
     .hero-section { padding: 130px 20px 60px 20px; }
     .about-section, .consultoria-section, .results-section, .testimonials-section, .plans-section, .contact-section { padding: 90px 20px; }
     
+    /* Sobre Mim e Moldura Dupla no Mobile */
     .about-container { flex-direction: column; text-align: center; gap: 40px; }
-    .about-photo-wrapper { max-width: 360px; margin: 0 auto; }
+    .about-photo-wrapper { width: 100%; max-width: 500px; margin: 0 auto; }
+    .evolution-grid { gap: 10px; }
+    .evolution-card { height: 330px; }
+    .evolution-badge { top: 10px; left: 10px; padding: 5px 10px; font-size: 0.62rem; }
     .about-text-card { padding: 30px 20px; }
     .about-highlight-quote { border-left: none; border-top: 3px solid var(--primary-yellow); padding-left: 0; padding-top: 16px; }
 
@@ -413,7 +564,7 @@ body {
     .testimonial-carousel::-webkit-scrollbar { display: none; }
     .testimonials-slider {
         transition: none;
-        transform: none !important; /* Evita conflito com o JS do desktop */
+        transform: none !important;
         gap: 0;
     }
     .testimonial-slide {
